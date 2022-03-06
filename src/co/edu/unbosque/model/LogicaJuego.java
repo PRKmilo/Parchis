@@ -3,6 +3,8 @@ package co.edu.unbosque.model;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import javax.swing.JOptionPane;
+
 public class LogicaJuego {
 private Player player1;
 private Player player2;
@@ -49,8 +51,47 @@ private ArrayList<Player> twolistplayer;
 			int dadotwo=dados();
 			if(p.getFichapos1() == 0 && p.getFichapos2() == 0 && p.getFichapos3() == 0 && p.getFichapos4() == 0) {
 				if(dadoone == 5 || dadotwo == 5) {
-					
+					p.setFichapos1(p.getPosini());
+					p.setFichapos2(p.getPosini());
+					p.setFichapos3(p.getPosini());
+					p.setFichapos4(p.getPosini());
 				}
+			}else if(p.getFichapos1() == 0 || p.getFichapos2() ==  0 || p.getFichapos3() == 0 || p.getFichapos4() == 0){
+			 ArrayList<Integer> ls = new ArrayList<Integer> ();
+			 ls.add(p.getFichapos1());
+			 ls.add(p.getFichapos2());
+			 ls.add(p.getFichapos3());
+			 ls.add(p.getFichapos4());
+			 for(int s=0;s<ls.size();s++) {
+				 if(ls.get(s) == 0) {
+					 ls.remove(s);
+				 }
+			 }
+			 String poss="";
+			 for(int s=0;s<ls.size();s++) {
+				 poss += (s+1)+"ficha que esta en la posicion "+ls.get(s)+"\n";
+			 }
+			 int r=Integer.parseInt(JOptionPane.showInputDialog("ingrese que quiere hacer con los dados 1 repartilos entre dos fichas"+
+			 "\n"+" o 2  poner todos los puntos en una sola ficha"));
+			 switch(r) {
+			 case 1:
+				 
+				 break;
+			 case 2:
+				 int t=Integer.parseInt(JOptionPane.showInputDialog("ingrese la posicion que quiere mover "+poss));
+				 switch(t) {
+				 case 1:
+					 if(p.getFichapos1() != 0) {
+						 p.setFichapos1(p.getFichapos1()+dadoone);
+					 }
+				 case 2:
+					 if() {
+						 
+					 }
+					 break;
+				 }
+				 break;
+			 }
 			}
 		}
 	}
