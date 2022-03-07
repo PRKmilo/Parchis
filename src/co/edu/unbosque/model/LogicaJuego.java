@@ -45,6 +45,16 @@ private ArrayList<Player> twolistplayer;
 		return listplayer;
 	}
 	
+	public void until() {
+		boolean  condicion1=player1.getFichapos1()==63 && player1.getFichapos2()==63 && player1.getFichapos3()==63 && player1.getFichapos4() == 63;
+		boolean condicion2=player2.getFichapos1()==80 && player2.getFichapos2()==80 && player2.getFichapos3()==80 && player2.getFichapos4()==80;
+		boolean condicion3=player3.getFichapos1()==97 && player3.getFichapos2()==97 && player3.getFichapos3()== 97 && player3.getFichapos4()==97;
+		boolean condicion4=player4.getFichapos1()==115 && player4.getFichapos2()==115 && player4.getFichapos3()==115 && player4.getFichapos4()==115;
+		for(int i=0;i<twolistplayer.size();i++) {
+			
+		}
+	}
+	
 	public void movimientos() {
 		for(Player p:twolistplayer) {
 			int dadoone=dados();
@@ -85,14 +95,16 @@ private ArrayList<Player> twolistplayer;
 						 p.setFichapos1(p.getFichapos1()+dadoone);
 					 }
 				 case 2:
-					 if() {
-						 
-					 }
+					 
 					 break;
 				 }
 				 break;
 			 }
 			}
 		}
+	}
+	
+	public void comerfichas() {
+		
 	}
 }
