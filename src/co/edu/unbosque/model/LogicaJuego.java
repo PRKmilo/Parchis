@@ -66,7 +66,7 @@ private ArrayList<Player> twolistplayer;
 					p.setFichapos3(p.getPosini());
 					p.setFichapos4(p.getPosini());
 				}
-			}else if(p.getFichapos1() == 0 || p.getFichapos2() ==  0 || p.getFichapos3() == 0 || p.getFichapos4() == 0){
+			}else if(p.getFichapos1() != 0 || p.getFichapos2() !=  0 || p.getFichapos3() != 0 || p.getFichapos4() != 0){
 			 ArrayList<Integer> ls = new ArrayList<Integer> ();
 			 ls.add(p.getFichapos1());
 			 ls.add(p.getFichapos2());
