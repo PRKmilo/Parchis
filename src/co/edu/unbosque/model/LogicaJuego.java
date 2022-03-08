@@ -11,8 +11,9 @@ private Player player2;
 private Player player3;
 private Player player4;
 private ArrayList<Player> listplayer;
-private ArrayList<Player> twolistplayer;
+public static  ArrayList<Player> twolistplayer;
 	public LogicaJuego() {
+		ArrayList twolistplayer = new ArrayList<>();
 		ArrayList listplayer = new ArrayList<>();
 		player1 =new Player(5,5,5,5,0,5);
 		player2=new Player(22,22,22,22,0,22);
@@ -50,9 +51,12 @@ private ArrayList<Player> twolistplayer;
 		boolean condicion2=player2.getFichapos1()==80 && player2.getFichapos2()==80 && player2.getFichapos3()==80 && player2.getFichapos4()==80;
 		boolean condicion3=player3.getFichapos1()==97 && player3.getFichapos2()==97 && player3.getFichapos3()== 97 && player3.getFichapos4()==97;
 		boolean condicion4=player4.getFichapos1()==115 && player4.getFichapos2()==115 && player4.getFichapos3()==115 && player4.getFichapos4()==115;
-		for(int i=0;i<twolistplayer.size();i++) {
-			
-		}
+	while(condicion1==false &&  condicion2==false && condicion3==false && condicion4==false) {
+		movimientos();
+		
+	}
+	
+	
 	}
 	
 	public void movimientos() {
@@ -104,7 +108,28 @@ private ArrayList<Player> twolistplayer;
 		}
 	}
 	
-	public void comerfichas() {
+	public void comerfichas(int posicion) {
+
+		for (int i=0; i< twolistplayer.size();i++) {
+			
+	
+			ArrayList fichas=new  ArrayList<>();
+			fichas.add(twolistplayer.get(i).getFichapos1());
+			fichas.add(twolistplayer.get(i).getFichapos2());
+			fichas.add(twolistplayer.get(i).getFichapos3());
+			fichas.add(twolistplayer.get(i).getFichapos4());
+			
+			for (int k=0;k<fichas.size();k++) {
+				
+				if(fichas.get(k)==posicion) {
+					
+				}
+				
+			}
+			
+		}
+		
+		
 		
 	}
 }
